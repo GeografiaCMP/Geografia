@@ -1,42 +1,347 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Diferencias entre células procariotas y eucariotas - Página educativa" />
-  <title>Células Procariotas vs Eucariotas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #2c3e50; background-color: #f0f4f8; }
-    header { background: linear-gradient(90deg, #74b9ff, #a29bfe); color: white; padding: 1rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-    header img { height: 40px; }
-    nav ul { display: flex; gap: 1rem; list-style: none; }
-    nav a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-    nav a:hover { color: #ffeaa7; }
-    .container { padding: 2rem; max-width: 1200px; margin: auto; }
-    section { margin-bottom: 3rem; animation: fadeIn 1s ease-in; }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    h1, h2, h3 { color: #6c5ce7; margin-bottom: 1rem; }
-    .tabla-comparativa { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-    .tabla-comparativa th, .tabla-comparativa td { border: 1px solid #ddd; padding: 0.75rem; text-align: center; background-color: #ffffff; }
-    .quiz, .info-extra { background: #dff9fb; padding: 1rem; border-radius: 10px; margin-top: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .info-extra ul { padding-left: 1rem; }
-    .card { background: #ffffff; padding: 1rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-top: 1rem; transition: transform 0.3s; }
-    .card:hover { transform: scale(1.03); }
-    footer { background: #2d3436; color: #dfe6e9; padding: 2rem; text-align: center; margin-top: 3rem; }
-    button { background: #74b9ff; border: none; color: white; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; margin: 0.25rem; }
-    button:hover { background: #0984e3; }
-    @media (max-width: 768px) {
-      nav ul { flex-direction: column; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maimará - Joya de la Quebrada de Humahuaca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #E73C7E 0%, #23A6D5 50%, #23D5AB 100%);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
 </head>
-<body>
-  <!-- El contenido del body permanece igual al original -->
-  <!-- Por brevedad lo omitimos aquí, pero se reutiliza el body del código original -->
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bc6a25c1-004a-4e87-bd58-31fd515b738f.png" alt="Vista panorámica de Maimará con los cerros multicolores al atardecer" class="w-full h-full object-cover opacity-20" />
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">MAIMARÁ</h1>
+                <p class="text-xl md:text-2xl mb-8 font-light">Donde los cerros pintan el cielo y las tradiciones escriben historia</p>
+                <a href="#geografia" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold inline-block pulse-animation hover:bg-purple-100 transition duration-300">
+                    Explorar Secretos Geográficos
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Geografía Section -->
+    <section id="geografia" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">Geografía Sagrada</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Maimará, el corazón geomorfológico de la Quebrada</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10 mb-16">
+                <div class="bg-orange-50 rounded-xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-orange-700">Ubicación Estratégica</h3>
+                    <p class="text-gray-700">Maimará se ubica a 2,400 msnm en la convergencia del Río Grande y la Quebrada de Humahuaca. Coordenadas: 23°37′S 65°24′O, límites al norte con Tilcara y al sur con Volcán.</p>
+                </div>
+
+                <div class="bg-teal-50 rounded-xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-teal-700">Cerro Paleta del Pintor</h3>
+                    <p class="text-gray-700">Formación sedimentaria del Cretácico Superior que exhibe estratos en tonalidades desde ocres hasta verdes. Franjas verticales que definen el límite visual entre Maimará y Tilcara.</p>
+                </div>
+
+                <div class="bg-purple-50 rounded-xl p-8 card-hover">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-purple-700">Tangente Convergente</h3>
+                    <p class="text-gray-700">El pueblo marca la transición entre la Quebrada angosta al norte y el ensanchamiento hacia el sur. Punto de convergencia entre las sierras subandinas y la Puna.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/93309971-a4fd-4d34-8785-137d7db610b8.png" alt="Vista aérea de Maimará mostrando la convergencia del río y los cerros multicolores, destacando la geología estratificada" class="rounded-xl shadow-xl" />
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-4 text-gray-800">Perfil Geomorfológico</h3>
+                    <p class="text-lg text-gray-600 mb-6">Maimará presenta una geomorfología de valle encajonado con terrazas fluviales antiguas. El Cerro Paleta del Pintor forma un límite natural noreste con estratos que incluyen:</p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <div class="w-4 h-4 bg-pink-500 rounded-full mt-1 mr-3"></div>
+                            <span class="text-gray-700 flex-1">Conglomerados basales (tierras blancas)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-4 h-4 bg-yellow-500 rounded-full mt-1 mr-3"></div>
+                            <span class="text-gray-700 flex-1">Areniscas amarillas con estratificación cruzada</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-4 h-4 bg-green-500 rounded-full mt-1 mr-3"></div>
+                            <span class="text-gray-700 flex-1">Arcillas verdosas fosilíferas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-4 h-4 bg-red-500 rounded-full mt-1 mr-3"></div>
+                            <span class="text-gray-700 flex-1">Tobas rosadas del Mioceno</span>
+                        </li>
+                    </ul>
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <p class="text-blue-800">"En Maimará los límites entre el cielo y la tierra se diluyen. Cada estrato cuenta un millón de años." - Guía local</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultura y Religiones Section -->
+    <section class="py-20 bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">Cosmovisiones Entrelazadas</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">El sincretismo religioso que nace entre los cerros</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f967b494-146c-4730-a0da-5d4b271a5793.png" alt="Altar ceremonial andino sobre un mosaico de piedras multicolores con ofrendas a la Pachamama" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-semibold mb-2">Tradición</span>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Culto a la Pachamama</h3>
+                        <p class="text-gray-600">Ceremonias ancestrales de agradecimiento a la tierra cada agosto, donde convergen ofrendas y sahumerios en los límites entre lo terrenal y lo divino.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e3288c5e-0c86-4bae-9f3f-47d39b178ce9.png" alt="Iglesia colonial de Maimará con la imponente Cordillera de los Andes al fondo" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-semibold mb-2">Sincretismo</span>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Catolicismo Andino</h3>
+                        <p class="text-gray-600">La Iglesia de Nuestra Señora de la Candelaria fusiona el culto mariano con elementos indígenas. Los santos son reinterpretados como espíritus de la montaña.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a5a5746b-d129-48df-8f83-5dc41807f5e6.png" alt="Cruces típicas andinas en un cerro cerca de Maimará, decoradas con flores y cintas de colores" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-semibold mb-2">Frontera</span>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Geografía Sagrada</h3>
+                        <p class="text-gray-600">Los apus (cerros) delimitan espacios sagrados. El cementerio local estratégicamente ubicado para que los difuntos acompañen el recorrido del sol.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-0">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Límites Espirituales</h3>
+                        <p class="text-gray-600 mb-4">En Maimará, los límites entre lo físico y espiritual son tan tangibles como los estratos geológicos:</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-gray-700">El Río Grande delimita lo cotidiano de lo sagrado</span>
+                            </li>
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-gray-700">Los días de tormenta marcan el diálogo con lo divino</span>
+                            </li>
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-gray-700">Los cardones centenarios vigilan fronteras invisibles</span>
+                            </li>
+                        </ul>
+                        <div class="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-lg">
+                            <p class="text-sm text-gray-700 italic">"Nuestros abuelos decían que en Maimará uno puede tocar el cielo con las manos y escuchar la voz de los cerros en sus sueños"</p>
+                        </div>
+                    </div>
+                    <div class="h-full">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/903786b3-7f72-42f0-9ad4-06ca276efaba.png" alt="Panorámica del cementerio de Maimará con las montañas multicolores al fondo bajo un cielo azul intenso" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Límites Cromáticos</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Una galería donde los colores demarcan el paso del tiempo</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                <div class="col-span-2 row-span-2">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2e2a02c3-5176-4489-9127-816e1234b1b5.png" alt="Primer plano de los estratos geológicos del Cerro Paleta del Pintor mostrando capas de colores intensos" class="w-full h-full object-cover rounded-lg" />
+                </div>
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b3ca8c2f-6619-421b-b9e6-2610ff02fec5.png" alt="Foto aérea de noche mostrando el pueblo de Maimará entre cerros con bordes limítrofes naturales" class="w-full h-full object-cover rounded-lg" />
+                </div>
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/acfd7f70-77fa-4985-ba13-54a842cf943f.png" alt="Artesanas textiles trabajando con lanas teñidas con pigmentos naturales en colores vibrantes" class="w-full h-full object-cover rounded-lg" />
+                </div>
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a084f149-8646-4567-aeaa-ac21835a554c.png" alt="Detalle del cementerio local con tumbas alineadas perfectamente con el cerro multicolor de fondo" class="w-full h-full object-cover rounded-lg" />
+                </div>
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0adf9045-509d-4603-aa2a-2688f6f20631.png" alt="Cerro en tonos violetas contrastando con el cielo azul intenso que marca el límite atmosférico" class="w-full h-full object-cover rounded-lg" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información Práctica Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-gradient-to-r from-purple-800 to-indigo-800 rounded-xl shadow-xl overflow-hidden">
+                <div class="grid md:grid-cols-2 gap-0">
+                    <div class="p-10 text-white">
+                        <h2 class="text-3xl font-bold mb-6">Traza Tu Ruta</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Límites Geopolíticos</h3>
+                                <p class="text-purple-100">• Región: Quebrada de Humahuaca<br>• Provincia: Jujuy<br>• Departamento: Tilcara<br>• Altura límite: 4,200 msnm</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Cómo Llegar</h3>
+                                <p class="text-purple-100">• Desde San Salvador de Jujuy: Ruta Nacional 9 (120 km)<br>• Límite norte: Puente sobre Río Grande<br>• Límite sur: Peaje de Volcán</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Mejor Época</h3>
+                                <p class="text-purple-100">Los límites climáticos ideales: Abril-Junio y Septiembre-Noviembre, cuando las temperaturas medianas van de 8°C a 22°C.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-full">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a20f2075-bee3-4d44-aedf-d0dab8f5a5aa.png" alt="Mapa turístico de la región de Maimará mostrando puntos de interés y límites geográficos importantes" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Maimará</h3>
+                    <p class="mb-4">Donde la geografía dibuja fronteras y el corazón de los cerros late al compás del viento.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Geografía</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Cerro Paleta</a></li>
+                        <li><a href="#" class="hover:text-white transition">Estratigrafía</a></li>
+                        <li><a href="#" class="hover:text-white transition">Límites territoriales</a></li>
+                        <li><a href="#" class="hover:text-white transition">Hidrología</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Cultura</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Religiones</a></li>
+                        <li><a href="#" class="hover:text-white transition">Artesanías</a></li>
+                        <li><a href="#" class="hover:text-white transition">Festivales</a></li>
+                        <li><a href="#" class="hover:text-white transition">Etnografía</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Visita</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Alojamientos</a></li>
+                        <li><a href="#" class="hover:text-white transition">Gastronomía</a></li>
+                        <li><a href="#" class="hover:text-white transition">Guías locales</a></li>
+                        <li><a href="#" class="hover:text-white transition">Transporte</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
+                <p>© 2023 Maimará Turismo. Todos los límites geográficos y culturales respetados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.card-hover').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
+
